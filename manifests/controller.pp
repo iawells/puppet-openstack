@@ -357,6 +357,9 @@ class openstack::controller(
   }
   class { 'cinder::keystone::auth':
       password         => $cinder_user_password,
+      public_address   => $public_address,
+      internal_address => $internal_address,
+      admin_address    => $admin_address,
   }
   ######## END CINDER ########
 
